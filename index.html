@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src='/wechatService/js/jquery-3.2.1.min.js'>
+		</script>
+		<script src="/wechatService/common/common.js"></script>
+		
+		
+	</head>
+
+	<body>
+		<script>
+			$(function() {
+				var APPID = "wx6c95fafbb7b9a48d";
+				var REDIRECT_URI = api+"/wechatService/all.html";
+				var CODE = "code";
+				var SCOPE = "snsapi_userinfo";
+				var url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + APPID + "&redirect_uri=" + REDIRECT_URI + "&response_type=" + CODE + "&scope=" + SCOPE + "#wechat_redirect";
+				window.location.href = url;
+			})
+		</script>
+
+	</body>
+
+</html>
